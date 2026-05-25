@@ -16,8 +16,8 @@
 
   <button
     class="btn btn-warning"
-    (click)="seccion='clima'">
-    Clima
+    (click)="seccion='autos'">
+    Autos
   </button>
 
   <hr>
@@ -26,6 +26,6 @@
 
   <app-conversor *ngIf="seccion==='conversor'"></app-conversor>
 
-  <app-clima *ngIf="seccion==='clima'"></app-clima>
+  <app-autos *ngIf="seccion==='autos'"></app-autos>
 
 </div>

@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { Peliculas } from './components/peliculas/peliculas';
 import { Conversor } from './components/conversor/conversor';
-import { Clima } from './components/clima/clima';
+import { Autos } from './components/autos/autos';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +12,7 @@ import { Clima } from './components/clima/clima';
     CommonModule,
     Peliculas,
     Conversor,
-    Clima
+    Autos,
   ],
   templateUrl: './app.html',
   styleUrl: './app.css'
