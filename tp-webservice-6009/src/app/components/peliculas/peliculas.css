@@ -1,0 +1,25 @@
+.movie-card{
+    transition: 0.3s;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #3a3a3a;
+}
+
+.movie-card:hover{
+    transform: scale(1.03);
+    box-shadow: 0px 0px 20px rgba(255,255,255,0.3);
+}
+
+.movie-img{
+    height: 400px;
+    object-fit: cover;
+}
+
+.card-body{
+    background-color: #3a3a3a;
+}
+
+.badge{
+    font-size: 0.8rem;
+    font-weight: bold;
+}

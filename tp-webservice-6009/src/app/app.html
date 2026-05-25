@@ -1,0 +1,31 @@
+<div class="container mt-4">
+
+  <h1 class="mb-4">TP Web Services</h1>
+
+  <button
+    class="btn btn-primary me-2"
+    (click)="seccion='peliculas'">
+    Películas
+  </button>
+
+  <button
+    class="btn btn-success me-2"
+    (click)="seccion='conversor'">
+    Conversor
+  </button>
+
+  <button
+    class="btn btn-warning"
+    (click)="seccion='clima'">
+    Clima
+  </button>
+
+  <hr>
+
+  <app-peliculas *ngIf="seccion==='peliculas'"></app-peliculas>
+
+  <app-conversor *ngIf="seccion==='conversor'"></app-conversor>
+
+  <app-clima *ngIf="seccion==='clima'"></app-clima>
+
+</div>

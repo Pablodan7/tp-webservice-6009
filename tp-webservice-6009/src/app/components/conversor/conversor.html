@@ -1,0 +1,93 @@
+<div class="container mt-5">
+
+  <div class="card conversor-card p-4">
+
+    <h2 class="text-center mb-4 text-white">
+      💱 Conversor de Monedas
+    </h2>
+
+    <label class="form-label text-white">
+      Cantidad
+    </label>
+
+    <input
+      type="number"
+      class="form-control mb-3"
+      [(ngModel)]="cantidad"
+      (input)="limpiarResultado()">
+
+    <label class="form-label text-white">
+      De
+    </label>
+
+    <select
+      class="form-select mb-3"
+      [(ngModel)]="monedaOrigen"
+      (change)="limpiarResultado()">
+
+      <option value="ARS">
+        ARS - Peso Argentino
+      </option>
+
+      <option value="USD">
+        USD - Dólar Estadounidense
+      </option>
+
+      <option value="EUR">
+        EUR - Euro
+      </option>
+
+    </select>
+
+    <label class="form-label text-white">
+      A
+    </label>
+
+    <select
+      class="form-select mb-4"
+      [(ngModel)]="monedaDestino"
+      (change)="limpiarResultado()">
+
+      <option value="ARS">
+        ARS - Peso Argentino
+      </option>
+
+      <option value="USD">
+        USD - Dólar Estadounidense
+      </option>
+
+      <option value="EUR">
+        EUR - Euro
+      </option>
+
+    </select>
+
+    <button
+      class="btn btn-success"
+      (click)="convertir()">
+
+      Convertir
+
+    </button>
+
+    <div
+      *ngIf="resultado"
+      class="alert alert-info mt-4 text-center">
+
+      <h4>
+
+        {{ cantidad }}
+        {{ monedaOrigen }}
+
+        =
+
+        {{ resultado | number:'1.2-2' }}
+        {{ monedaDestino }}
+
+      </h4>
+
+    </div>
+
+  </div>
+
+</div>

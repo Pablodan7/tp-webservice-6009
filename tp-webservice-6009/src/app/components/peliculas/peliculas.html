@@ -1,0 +1,83 @@
+<div class="container-fluid bg-dark text-white p-4 min-vh-100">
+
+  <h1 class="text-center fw-bold mb-5">
+    🎬 Top 100 Movies
+  </h1>
+
+  <div
+    *ngIf="cargando"
+    class="text-center mt-5">
+
+    <div class="spinner-border text-light"></div>
+
+    <p class="mt-3">
+      Cargando películas...
+    </p>
+
+  </div>
+
+  <div
+    *ngIf="!cargando"
+    class="row">
+
+    <div
+      class="col-lg-3 col-md-4 col-sm-6 mb-4"
+      *ngFor="let pelicula of peliculas">
+
+      <div class="card movie-card text-white border-light h-100">
+
+        <img
+          [src]="pelicula.image"
+          class="card-img-top movie-img">
+
+        <div class="card-body">
+
+          <h5 class="fw-bold">
+            {{ pelicula.title }}
+          </h5>
+
+          <p class="text-secondary mb-2">
+            Año: {{ pelicula.year }}
+          </p>
+
+          <div class="mb-3">
+
+            <p class="mb-2 fw-bold">
+              Género:
+            </p>
+
+            <span
+              *ngFor="let genero of pelicula.genre"
+              class="badge rounded-pill me-1 mb-1 p-2"
+              [ngClass]="{
+                'bg-danger': genero === 'Drama',
+                'bg-primary': genero === 'Action',
+                'bg-success': genero === 'Crime',
+                'bg-warning text-dark': genero === 'Adventure',
+                'bg-info text-dark': genero === 'Sci-Fi',
+                'bg-secondary': genero === 'Biography',
+                'bg-dark': genero === 'Mystery',
+                'bg-light text-dark': genero === 'Family',
+                'text-bg-primary': genero === 'Fantasy',
+                'text-bg-danger': genero === 'Thriller'
+              }">
+
+              {{ genero }}
+
+            </span>
+
+          </div>
+
+          <h6 class="text-warning">
+            ⭐ {{ pelicula.rating }}
+          </h6>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

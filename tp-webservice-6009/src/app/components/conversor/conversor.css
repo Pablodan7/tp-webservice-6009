@@ -1,0 +1,14 @@
+.conversor-card{
+    background-color: #3a3a3a;
+    border-radius: 15px;
+    border: 1px solid #666;
+}
+
+.form-control,
+.form-select{
+    background-color: #f5f5f5;
+}
+
+.btn{
+    font-weight: bold;
+}
